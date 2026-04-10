@@ -1,16 +1,20 @@
 import streamlit as st
 import torch
+import os
+
 from model import LinearRegressionModel
-from utils import load_model
+from utils import load_model   # ✅ THIS is often missing
+
+# -------------------------
+# Path fix
+# -------------------------
+BASE_DIR = os.path.dirname(__file__)
+model_path = os.path.join(BASE_DIR, "model.pth")
 
 # -------------------------
 # Load model
 # -------------------------
-import os
-
-BASE_DIR = os.path.dirname(__file__)
-model_path = os.path.join(BASE_DIR, "model.pth")
-
+model = LinearRegressionModel()
 model = load_model(model, model_path)
 
 st.title("🍦 Ice Cream Sales Predictor")
