@@ -6,8 +6,12 @@ from utils import load_model
 # -------------------------
 # Load model
 # -------------------------
-model = LinearRegressionModel()
-model = load_model(model, "model.pth")
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+model_path = os.path.join(BASE_DIR, "model.pth")
+
+model = load_model(model, model_path)
 
 st.title("🍦 Ice Cream Sales Predictor")
 
