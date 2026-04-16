@@ -69,3 +69,8 @@ Example:
 ### 1. Install dependencies
 ```bash
 pip install -r requirements.txt
+
+```
+### live 
+
+https://pytorchnotes-9zcdwayfzhtfjpwiqbine8.streamlit.app/
